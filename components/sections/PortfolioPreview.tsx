@@ -2,13 +2,14 @@
 
 import { motion, useInView, AnimatePresence } from 'framer-motion';
 import { useRef, useState, useEffect, useCallback } from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
 
-const videos = [
+const projects = [
   {
     id: 'ai-market-intel',
-    src: '/videos/ai-market-intel.mov',
+    img: '/images/ai-market-intel.png',
     title: 'AI Market Intelligence App',
     label: 'AI-powered market intelligence dashboard',
     slug: 'ai-market-intelligence-engine',
@@ -17,7 +18,7 @@ const videos = [
   },
   {
     id: 'diamond-raw-hair',
-    src: '/videos/diamond-raw-hair.mp4',
+    img: '/images/diamond-raw-hair.png',
     title: 'Diamond Raw Hair Boutique',
     label: 'Beauty business website',
     slug: 'diamond-raw-hair-boutique',
@@ -26,7 +27,7 @@ const videos = [
   },
   {
     id: 'erika-scott-office',
-    src: '/videos/erika-scott-office.mov',
+    img: '/images/erika-scott-official.png',
     title: 'Erika Scott Office',
     label: 'Professional service website',
     slug: 'erika-scott-office',
@@ -35,7 +36,7 @@ const videos = [
   },
   {
     id: 'j-adore-lips',
-    src: '/videos/j-adore-lips.mp4',
+    img: '/images/j-adore-lips.png',
     title: 'J-Adore Lips',
     label: 'Beauty brand website',
     slug: 'j-adore-lips',
@@ -47,18 +48,9 @@ const videos = [
 const SLIDE_INTERVAL = 5000;
 
 const slideVariants = {
-  enter: (dir: number) => ({
-    x: dir > 0 ? 60 : -60,
-    opacity: 0,
-  }),
-  center: {
-    x: 0,
-    opacity: 1,
-  },
-  exit: (dir: number) => ({
-    x: dir > 0 ? -60 : 60,
-    opacity: 0,
-  }),
+  enter: (dir: number) => ({ x: dir > 0 ? 60 : -60, opacity: 0 }),
+  center: { x: 0, opacity: 1 },
+  exit: (dir: number) => ({ x: dir > 0 ? -60 : 60, opacity: 0 }),
 };
 
 export default function PortfolioPreview() {
@@ -69,21 +61,19 @@ export default function PortfolioPreview() {
   const [direction, setDirection] = useState(1);
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
-  const activeVideo = videos[activeIndex];
+  const active = projects[activeIndex];
 
   const startTimer = useCallback(() => {
     if (timerRef.current) clearInterval(timerRef.current);
     timerRef.current = setInterval(() => {
       setDirection(1);
-      setActiveIndex((prev) => (prev + 1) % videos.length);
+      setActiveIndex((prev) => (prev + 1) % projects.length);
     }, SLIDE_INTERVAL);
   }, []);
 
   useEffect(() => {
     startTimer();
-    return () => {
-      if (timerRef.current) clearInterval(timerRef.current);
-    };
+    return () => { if (timerRef.current) clearInterval(timerRef.current); };
   }, [startTimer]);
 
   const goTo = (index: number) => {
@@ -91,18 +81,14 @@ export default function PortfolioPreview() {
     setActiveIndex(index);
     startTimer();
   };
-
   const goPrev = () => {
-    const prev = (activeIndex - 1 + videos.length) % videos.length;
     setDirection(-1);
-    setActiveIndex(prev);
+    setActiveIndex((prev) => (prev - 1 + projects.length) % projects.length);
     startTimer();
   };
-
   const goNext = () => {
-    const next = (activeIndex + 1) % videos.length;
     setDirection(1);
-    setActiveIndex(next);
+    setActiveIndex((prev) => (prev + 1) % projects.length);
     startTimer();
   };
 
@@ -151,21 +137,21 @@ export default function PortfolioPreview() {
           <div
             className="absolute inset-0 rounded-3xl pointer-events-none transition-all duration-700"
             style={{
-              background: `radial-gradient(ellipse at 50% 60%, ${activeVideo.glowColor} 0%, rgba(4,27,77,0.3) 50%, transparent 75%)`,
+              background: `radial-gradient(ellipse at 50% 60%, ${active.glowColor} 0%, rgba(4,27,77,0.3) 50%, transparent 75%)`,
               filter: 'blur(32px)',
               transform: 'scale(1.08)',
             }}
           />
 
-          {/* Browser frame card */}
+          {/* Browser frame */}
           <div
             className="relative rounded-2xl overflow-hidden"
             style={{
               border: '1px solid rgba(255,255,255,0.1)',
-              boxShadow: `0 32px 80px rgba(0,0,0,0.6), 0 0 0 1px rgba(255,255,255,0.05)`,
+              boxShadow: '0 32px 80px rgba(0,0,0,0.6), 0 0 0 1px rgba(255,255,255,0.05)',
             }}
           >
-            {/* Browser chrome bar */}
+            {/* Chrome bar */}
             <div
               className="flex items-center gap-2 px-4 py-3"
               style={{ background: '#1a1a2e', borderBottom: '1px solid rgba(255,255,255,0.07)' }}
@@ -175,21 +161,28 @@ export default function PortfolioPreview() {
                 <div className="w-3 h-3 rounded-full bg-[#FFBD2E]" />
                 <div className="w-3 h-3 rounded-full bg-[#28CA41]" />
               </div>
-              <div
-                className="flex-1 mx-3 h-6 rounded-md flex items-center px-3"
-                style={{ background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.08)' }}
-              >
-                <span className="text-white/30 text-xs font-mono truncate">
-                  cowebing.com/{activeVideo.slug}
-                </span>
-              </div>
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={active.id + '-url'}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.2 }}
+                  className="flex-1 mx-3 h-6 rounded-md flex items-center px-3"
+                  style={{ background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.08)' }}
+                >
+                  <span className="text-white/30 text-xs font-mono truncate">
+                    cowebing.com/{active.slug}
+                  </span>
+                </motion.div>
+              </AnimatePresence>
             </div>
 
-            {/* Video area */}
+            {/* Screenshot area */}
             <div className="relative w-full overflow-hidden bg-[#0A0A0A]" style={{ aspectRatio: '16/9' }}>
               <AnimatePresence mode="wait" custom={direction}>
                 <motion.div
-                  key={activeVideo.id}
+                  key={active.id}
                   custom={direction}
                   variants={slideVariants}
                   initial="enter"
@@ -198,15 +191,13 @@ export default function PortfolioPreview() {
                   transition={{ duration: 0.45, ease: [0.32, 0.72, 0, 1] }}
                   className="absolute inset-0 w-full h-full"
                 >
-                  <video
-                    key={activeVideo.src}
-                    src={activeVideo.src}
-                    autoPlay
-                    muted
-                    playsInline
-                    loop
-                    className="w-full h-full"
-                    style={{ objectFit: 'cover' }}
+                  <Image
+                    src={active.img}
+                    alt={active.title}
+                    fill
+                    className="object-cover object-top"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 896px"
+                    priority={activeIndex === 0}
                   />
                 </motion.div>
               </AnimatePresence>
@@ -216,11 +207,7 @@ export default function PortfolioPreview() {
                 onClick={goPrev}
                 aria-label="Previous project"
                 className="absolute left-3 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full flex items-center justify-center transition-all duration-200 hover:scale-110"
-                style={{
-                  background: 'rgba(0,0,0,0.55)',
-                  border: '1px solid rgba(255,255,255,0.15)',
-                  backdropFilter: 'blur(8px)',
-                }}
+                style={{ background: 'rgba(0,0,0,0.55)', border: '1px solid rgba(255,255,255,0.15)', backdropFilter: 'blur(8px)' }}
               >
                 <ChevronLeft className="w-5 h-5 text-white" />
               </button>
@@ -230,11 +217,7 @@ export default function PortfolioPreview() {
                 onClick={goNext}
                 aria-label="Next project"
                 className="absolute right-3 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full flex items-center justify-center transition-all duration-200 hover:scale-110"
-                style={{
-                  background: 'rgba(0,0,0,0.55)',
-                  border: '1px solid rgba(255,255,255,0.15)',
-                  backdropFilter: 'blur(8px)',
-                }}
+                style={{ background: 'rgba(0,0,0,0.55)', border: '1px solid rgba(255,255,255,0.15)', backdropFilter: 'blur(8px)' }}
               >
                 <ChevronRight className="w-5 h-5 text-white" />
               </button>
@@ -247,20 +230,20 @@ export default function PortfolioPreview() {
             >
               <AnimatePresence mode="wait">
                 <motion.div
-                  key={activeVideo.id + '-info'}
+                  key={active.id + '-info'}
                   initial={{ opacity: 0, y: 8 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -8 }}
                   transition={{ duration: 0.3 }}
                 >
-                  <p className="text-white font-bold text-base leading-tight">{activeVideo.title}</p>
-                  <p className="text-white/45 text-sm mt-0.5">{activeVideo.label}</p>
+                  <p className="text-white font-bold text-base leading-tight">{active.title}</p>
+                  <p className="text-white/45 text-sm mt-0.5">{active.label}</p>
                 </motion.div>
               </AnimatePresence>
               <Link
-                href={`/portfolio/${activeVideo.slug}`}
+                href={`/portfolio/${active.slug}`}
                 className="flex-shrink-0 flex items-center gap-1.5 text-sm font-semibold transition-all duration-200 hover:gap-2.5"
-                style={{ color: activeVideo.accentColor }}
+                style={{ color: active.accentColor }}
               >
                 Case Study <ArrowRight className="w-4 h-4" />
               </Link>
@@ -269,26 +252,28 @@ export default function PortfolioPreview() {
 
           {/* Navigation dots */}
           <div className="flex items-center justify-center gap-2.5 mt-6">
-            {videos.map((v, i) => (
+            {projects.map((p, i) => (
               <button
-                key={v.id}
+                key={p.id}
                 onClick={() => goTo(i)}
-                aria-label={`Go to ${v.title}`}
+                aria-label={`Go to ${p.title}`}
                 className="transition-all duration-300 rounded-full"
                 style={{
                   width: i === activeIndex ? '28px' : '8px',
                   height: '8px',
-                  background:
-                    i === activeIndex
-                      ? `linear-gradient(90deg, #7B2FF7, #2563FF)`
-                      : 'rgba(255,255,255,0.2)',
+                  background: i === activeIndex
+                    ? 'linear-gradient(90deg, #7B2FF7, #2563FF)'
+                    : 'rgba(255,255,255,0.2)',
                 }}
               />
             ))}
           </div>
 
           {/* Progress bar */}
-          <div className="mt-3 h-0.5 max-w-xs mx-auto rounded-full overflow-hidden" style={{ background: 'rgba(255,255,255,0.06)' }}>
+          <div
+            className="mt-3 h-0.5 max-w-xs mx-auto rounded-full overflow-hidden"
+            style={{ background: 'rgba(255,255,255,0.06)' }}
+          >
             <motion.div
               key={activeIndex}
               initial={{ width: '0%' }}
