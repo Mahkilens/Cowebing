@@ -7,7 +7,7 @@ import { ArrowRight, Mail, MapPin, Clock, CheckCircle2, Loader2 } from 'lucide-r
 
 const contactInfo = [
   { icon: Mail, label: 'Email Us', value: 'marquisprescott16@gmail.com', href: 'mailto:marquisprescott16@gmail.com' },
-  { icon: MapPin, label: 'Location', value: 'Fort Lauderdale, FL', href: null },
+  { icon: MapPin, label: 'Location', value: 'US-Based · Remote & On-Site Available', href: null },
   { icon: Clock, label: 'Response Time', value: 'Within 24 hours', href: null },
 ];
 

@@ -7,7 +7,7 @@ import FAQ from '@/components/sections/FAQ';
 export const metadata: Metadata = {
   title: 'Pricing | Web Design & Development Packages',
   description:
-    'Transparent pricing for custom website design, development, and hosting in Fort Lauderdale, Florida. Starter, Business, and Premium packages. Schedule a free consultation.',
+    'Transparent pricing for custom website design, development, and hosting. Starter, Business, and Premium packages available. Schedule a free consultation.',
   alternates: { canonical: 'https://cowebing.com/pricing' },
 };
 

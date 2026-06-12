@@ -9,7 +9,7 @@ import PortfolioVideoCard from '@/components/ui/PortfolioVideoCard';
 export const metadata: Metadata = {
   title: 'Portfolio | Web Design Projects',
   description:
-    'Explore Cowebing\'s portfolio of custom web design and development projects. Real websites built for real businesses across South Florida.',
+    'Explore Cowebing\'s portfolio of custom web design and development projects. Real websites built for real businesses across the United States.',
   alternates: { canonical: 'https://cowebing.com/portfolio' },
 };
 

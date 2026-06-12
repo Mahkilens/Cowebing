@@ -7,7 +7,7 @@ import { ArrowRight, Play, Shield, Zap, Globe, Star } from 'lucide-react';
 const trustIndicators = [
   { icon: Shield, text: '99.9% Uptime Guaranteed' },
   { icon: Zap, text: '3–7 Day Delivery' },
-  { icon: Globe, text: 'Fort Lauderdale, FL' },
+  { icon: Globe, text: 'US-Based · Remote Friendly' },
   { icon: Star, text: '5-Star Client Experience' },
 ];
 
@@ -61,7 +61,7 @@ export default function Hero() {
             className="mb-8"
           >
             <span className="section-label">
-              Boutique Web Design &amp; Hosting &middot; Fort Lauderdale, FL
+              Custom Websites &middot; Hosting &middot; Digital Growth
             </span>
           </motion.div>
 

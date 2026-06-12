@@ -8,10 +8,10 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://cowebing.com'),
   title: {
     template: '%s | Cowebing',
-    default: 'Cowebing | Websites • Hosting • Growth',
+    default: 'Cowebing | Custom Websites, Hosting & Digital Growth',
   },
   description:
-    'Professional website design, website hosting, maintenance, and digital growth solutions for businesses in Fort Lauderdale and South Florida.',
+    'Cowebing helps businesses establish a powerful online presence through custom websites, hosting, maintenance, branding, and digital growth solutions.',
   manifest: '/site.webmanifest',
   icons: {
     icon: [
@@ -28,16 +28,18 @@ export const metadata: Metadata = {
     ],
   },
   keywords: [
-    'Fort Lauderdale Web Design',
-    'Fort Lauderdale Website Builder',
-    'South Florida Web Design',
-    'Business Website Development',
-    'Website Hosting',
-    'Website Maintenance',
-    'Website Designer Near Me',
-    'Small Business Websites',
-    'Website Development Services',
-    'Custom Website Design',
+    'web design',
+    'website development',
+    'custom websites',
+    'business websites',
+    'small business websites',
+    'website hosting',
+    'website maintenance',
+    'digital solutions',
+    'online presence',
+    'branding',
+    'website redesign',
+    'professional websites',
   ],
   authors: [{ name: 'Marquis Prescott', url: 'https://cowebing.com' }],
   creator: 'Cowebing',
@@ -58,24 +60,24 @@ export const metadata: Metadata = {
     locale: 'en_US',
     url: 'https://cowebing.com',
     siteName: 'Cowebing',
-    title: 'Cowebing | Websites • Hosting • Growth',
+    title: 'Cowebing | Custom Websites, Hosting & Digital Growth',
     description:
-      'Professional website design, website hosting, maintenance, and digital growth solutions for businesses in Fort Lauderdale and South Florida.',
+      'Cowebing helps businesses establish a powerful online presence through custom websites, hosting, maintenance, branding, and digital growth solutions.',
     images: [
       {
-        url: '/og-image.jpg',
+        url: '/images/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'Cowebing – Professional Web Design & Hosting in Fort Lauderdale',
+        alt: 'Cowebing – Custom Websites, Hosting & Digital Growth',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Cowebing | Websites • Hosting • Growth',
+    title: 'Cowebing | Custom Websites, Hosting & Digital Growth',
     description:
-      'Professional website design, website hosting, maintenance, and digital growth solutions for businesses in Fort Lauderdale and South Florida.',
-    images: ['/og-image.jpg'],
+      'Cowebing helps businesses establish a powerful online presence through custom websites, hosting, maintenance, branding, and digital growth solutions.',
+    images: ['/images/og-image.png'],
     creator: '@cowebing',
   },
   alternates: {
@@ -87,29 +89,34 @@ const structuredData = {
   '@context': 'https://schema.org',
   '@graph': [
     {
-      '@type': 'Organization',
+      '@type': ['Organization', 'ProfessionalService'],
       '@id': 'https://cowebing.com/#organization',
       name: 'Cowebing',
       url: 'https://cowebing.com',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://cowebing.com/logo.png',
+        url: 'https://cowebing.com/images/cowebing-logo.png',
+        width: 512,
+        height: 512,
       },
+      image: 'https://cowebing.com/images/og-image.png',
       description:
-        'Cowebing helps businesses establish a professional online presence through custom website design, website hosting, maintenance, and growth-focused digital solutions.',
+        'Cowebing helps businesses establish a powerful online presence through custom websites, hosting, maintenance, branding, and digital growth solutions.',
       foundingDate: '2024',
       founder: {
         '@type': 'Person',
         name: 'Marquis Prescott',
       },
-      areaServed: ['Fort Lauderdale', 'Broward County', 'South Florida', 'Florida'],
+      email: 'marquisprescott16@gmail.com',
+      areaServed: 'United States',
       serviceType: [
         'Web Design',
         'Web Development',
         'Website Hosting',
         'Website Maintenance',
+        'Branding',
         'SEO',
-        'Business Growth Solutions',
+        'Digital Growth Solutions',
       ],
       sameAs: [
         'https://www.instagram.com/cowebing',
@@ -118,41 +125,12 @@ const structuredData = {
       ],
     },
     {
-      '@type': 'LocalBusiness',
-      '@id': 'https://cowebing.com/#local-business',
-      name: 'Cowebing',
-      description:
-        'Professional web design, development, hosting, and digital solutions for businesses in Fort Lauderdale and South Florida.',
-      url: 'https://cowebing.com',
-      email: 'hello@cowebing.com',
-      address: {
-        '@type': 'PostalAddress',
-        addressLocality: 'Fort Lauderdale',
-        addressRegion: 'FL',
-        addressCountry: 'US',
-      },
-      geo: {
-        '@type': 'GeoCoordinates',
-        latitude: 26.1224,
-        longitude: -80.1373,
-      },
-      openingHoursSpecification: [
-        {
-          '@type': 'OpeningHoursSpecification',
-          dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-          opens: '09:00',
-          closes: '18:00',
-        },
-      ],
-      priceRange: '$$',
-      image: 'https://cowebing.com/og-image.jpg',
-    },
-    {
       '@type': 'WebSite',
       '@id': 'https://cowebing.com/#website',
       url: 'https://cowebing.com',
       name: 'Cowebing',
-      description: 'Professional web design, development, and hosting services.',
+      description:
+        'Cowebing helps businesses establish a powerful online presence through custom websites, hosting, maintenance, branding, and digital growth solutions.',
       publisher: {
         '@id': 'https://cowebing.com/#organization',
       },

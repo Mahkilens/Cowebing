@@ -6,7 +6,7 @@ import Contact from '@/components/sections/Contact';
 export const metadata: Metadata = {
   title: 'Contact Us | Schedule Free Consultation',
   description:
-    'Schedule your free website consultation with Cowebing. Fort Lauderdale web design, development, and hosting for South Florida businesses.',
+    'Schedule your free website consultation with Cowebing. Custom web design, development, and hosting for businesses of all sizes. Get started today.',
   alternates: { canonical: 'https://cowebing.com/contact' },
 };
 

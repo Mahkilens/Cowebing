@@ -53,12 +53,12 @@ export default function Footer() {
               </span>
             </Link>
             <p className="text-white/50 text-sm leading-relaxed max-w-xs mb-6">
-              Helping businesses in Fort Lauderdale and South Florida establish a powerful online
-              presence through custom web design, hosting, and growth solutions.
+              Helping businesses build a powerful online presence through custom web design,
+              hosting, and growth-focused digital solutions.
             </p>
             <div className="flex items-center gap-2 text-sm text-white/40 mb-2">
               <MapPin className="w-3.5 h-3.5 flex-shrink-0" />
-              <span>Fort Lauderdale, FL</span>
+              <span>US-Based · Serving Clients Nationwide</span>
             </div>
             <div className="flex items-center gap-2 text-sm text-white/40 mb-6">
               <Mail className="w-3.5 h-3.5 flex-shrink-0" />

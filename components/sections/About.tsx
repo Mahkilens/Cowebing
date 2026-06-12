@@ -65,8 +65,8 @@ export default function About() {
               <span className="gradient-text">Driven by Results</span>
             </h2>
             <p className="text-white/60 leading-relaxed mb-6">
-              Cowebing is a Fort Lauderdale-based web design and digital solutions agency helping
-              businesses across South Florida establish powerful, professional online presences.
+              Cowebing is a web design and digital solutions company helping businesses
+              establish powerful, professional online presences — built to grow with you.
             </p>
             <p className="text-white/60 leading-relaxed mb-8">
               We specialize in custom website design, development, reliable hosting, ongoing

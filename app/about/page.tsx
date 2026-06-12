@@ -5,9 +5,9 @@ import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 
 export const metadata: Metadata = {
-  title: 'About | Fort Lauderdale Web Design Agency',
+  title: 'About | Web Design & Digital Solutions Company',
   description:
-    'Learn about Cowebing — Fort Lauderdale\'s premier web design agency. Founded by Marquis Prescott with a mission to help businesses build powerful online presences.',
+    'Learn about Cowebing — a founder-led web design and digital solutions company. Built by Marquis Prescott with a mission to help businesses grow online.',
   alternates: { canonical: 'https://cowebing.com/about' },
 };
 
@@ -70,9 +70,9 @@ export default function AboutPage() {
                 <span className="gradient-text">Driven by Results</span>
               </h1>
               <p className="text-xl text-white/55 leading-relaxed">
-                Cowebing is a Fort Lauderdale-based web design and digital solutions agency on
-                a mission to help businesses across South Florida establish powerful, professional
-                online presences — without the agency overhead.
+                Cowebing is a founder-led web design and digital solutions company on
+                a mission to help businesses establish powerful, professional online
+                presences — without the agency overhead.
               </p>
             </div>
           </div>
@@ -98,7 +98,7 @@ export default function AboutPage() {
                   expertise, and delivered with genuine personal service.
                 </p>
                 <p className="text-gray-600 leading-relaxed mb-8">
-                  Based in Fort Lauderdale, Marquis works directly with every Cowebing client —
+                  Marquis works directly with every Cowebing client —
                   no middlemen, no outsourcing, no junior designers. When you work with Cowebing,
                   you work directly with the person building your website.
                 </p>
@@ -134,7 +134,7 @@ export default function AboutPage() {
                     }}
                   >
                     <MapPin className="w-4 h-4" />
-                    Fort Lauderdale, FL
+                    US-Based · Remote &amp; On-Site
                   </div>
                 </div>
               </div>

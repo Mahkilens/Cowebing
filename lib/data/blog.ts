@@ -24,7 +24,7 @@ export const blogPosts: BlogPost[] = [
     readTime: '5 min read',
     author: 'Marquis Prescott',
     authorTitle: 'Founder, Cowebing',
-    tags: ['Web Design', 'Small Business', 'Digital Presence', 'Fort Lauderdale'],
+    tags: ['Web Design', 'Small Business', 'Digital Presence', 'Online Presence'],
     content: `
 ## Your Website Is Your Digital Storefront
 
@@ -36,7 +36,7 @@ A professional website communicates credibility before you ever speak to a poten
 
 According to recent studies, over **81% of consumers** research a business online before making a purchase decision. If your website looks outdated, loads slowly, or doesn't exist at all, you're leaving revenue on the table every single day.
 
-In South Florida's competitive market, businesses that invest in professional web design consistently outperform those that don't — not just in search rankings, but in customer perception and conversion rates.
+In today's competitive market, businesses that invest in professional web design consistently outperform those that don't — not just in search rankings, but in customer perception and conversion rates.
 
 ## What a Professional Website Does for Your Business
 
@@ -65,7 +65,7 @@ The return on investment from a professional website far exceeds its cost within
 
 ## Why Cowebing?
 
-At Cowebing, we specialize in building custom websites for small and medium-sized businesses in Fort Lauderdale and South Florida. Every website we build is:
+At Cowebing, we specialize in building custom websites for small and medium-sized businesses. Every website we build is:
 
 - **Custom designed** — no templates, no shortcuts
 - **Mobile optimized** — perfect on every device
@@ -215,7 +215,7 @@ The best time to start investing in local SEO was yesterday. The second best tim
 3. Collecting reviews from satisfied customers
 4. Updating your NAP information consistently across directories
 
-If you want expert guidance on building a search-optimized website for your Fort Lauderdale business, [schedule a free consultation](/contact) with Cowebing today.
+If you want expert guidance on building a search-optimized website for your business, [schedule a free consultation](/contact) with Cowebing today.
     `,
   },
 ];

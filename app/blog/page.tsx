@@ -8,7 +8,7 @@ import { blogPosts } from '@/lib/data/blog';
 export const metadata: Metadata = {
   title: 'Blog | Web Design & Digital Marketing Insights',
   description:
-    'Expert insights on web design, website hosting, local SEO, and digital growth strategies for Fort Lauderdale and South Florida businesses.',
+    'Expert insights on web design, website hosting, SEO, and digital growth strategies to help businesses build a powerful online presence.',
   alternates: { canonical: 'https://cowebing.com/blog' },
 };
 
@@ -34,7 +34,7 @@ export default function BlogPage() {
             </h1>
             <p className="text-lg text-white/50 max-w-xl mx-auto">
               Expert insights on web design, digital strategy, and online growth — written
-              for business owners in Fort Lauderdale and South Florida.
+              for business owners who want to build and scale their online presence.
             </p>
           </div>
         </section>

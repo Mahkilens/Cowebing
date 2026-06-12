@@ -8,7 +8,7 @@ import Process from '@/components/sections/Process';
 export const metadata: Metadata = {
   title: 'Services | Web Design, Development & Hosting',
   description:
-    'Cowebing offers custom web design, website development, reliable hosting, maintenance, SEO foundations, and business growth solutions in Fort Lauderdale, FL.',
+    'Cowebing offers custom web design, website development, reliable hosting, maintenance, SEO foundations, and digital growth solutions for businesses of all sizes.',
   alternates: { canonical: 'https://cowebing.com/services' },
 };
 
@@ -143,7 +143,7 @@ export default function ServicesPage() {
             </h1>
             <p className="text-xl text-white/50 max-w-2xl mx-auto">
               Custom web design, development, hosting, maintenance, and growth — all from one
-              dedicated partner in Fort Lauderdale.
+              dedicated partner who works directly with your business.
             </p>
           </div>
         </section>
