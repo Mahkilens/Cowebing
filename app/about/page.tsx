@@ -5,10 +5,35 @@ import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 
 export const metadata: Metadata = {
-  title: 'About | Web Design & Digital Solutions Company',
+  title: { absolute: 'About Cowebing | Founder-Led Web Design & Digital Solutions' },
   description:
-    'Learn about Cowebing — a founder-led web design and digital solutions company. Built by Marquis Prescott with a mission to help businesses grow online.',
+    'Cowebing is a founder-led web design and digital solutions company built by Marquis Prescott. We help businesses grow online with custom websites, hosting, and hands-on digital strategy — no middlemen, no templates.',
   alternates: { canonical: 'https://cowebing.com/about' },
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://cowebing.com/about',
+    siteName: 'Cowebing',
+    title: 'About Cowebing | Founder-Led Web Design & Digital Solutions',
+    description:
+      'Cowebing is a founder-led web design and digital solutions company built by Marquis Prescott. We help businesses grow online with custom websites, hosting, and hands-on digital strategy — no middlemen, no templates.',
+    images: [
+      {
+        url: '/images/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'About Cowebing — Founder-Led Web Design',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'About Cowebing | Founder-Led Web Design & Digital Solutions',
+    description:
+      'Cowebing is a founder-led web design and digital solutions company built by Marquis Prescott. We help businesses grow online with custom websites, hosting, and hands-on digital strategy.',
+    images: ['/images/og-image.png'],
+    creator: '@cowebing',
+  },
 };
 
 const values = [

@@ -6,10 +6,35 @@ import Footer from '@/components/layout/Footer';
 import Process from '@/components/sections/Process';
 
 export const metadata: Metadata = {
-  title: 'Services | Web Design, Development & Hosting',
+  title: { absolute: 'Web Design, Hosting & Digital Services | Cowebing' },
   description:
-    'Cowebing offers custom web design, website development, reliable hosting, maintenance, SEO foundations, and digital growth solutions for businesses of all sizes.',
+    'Custom web design, website development, reliable hosting, maintenance plans, SEO foundations, and booking systems — all from one dedicated partner built for growing businesses.',
   alternates: { canonical: 'https://cowebing.com/services' },
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://cowebing.com/services',
+    siteName: 'Cowebing',
+    title: 'Web Design, Hosting & Digital Services | Cowebing',
+    description:
+      'Custom web design, website development, reliable hosting, maintenance plans, SEO foundations, and booking systems — all from one dedicated partner built for growing businesses.',
+    images: [
+      {
+        url: '/images/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Cowebing Services — Web Design, Hosting & Digital Solutions',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Web Design, Hosting & Digital Services | Cowebing',
+    description:
+      'Custom web design, website development, reliable hosting, maintenance plans, SEO, and booking systems — all from one dedicated partner for growing businesses.',
+    images: ['/images/og-image.png'],
+    creator: '@cowebing',
+  },
 };
 
 const services = [

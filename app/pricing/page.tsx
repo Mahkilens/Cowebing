@@ -5,10 +5,35 @@ import Pricing from '@/components/sections/Pricing';
 import FAQ from '@/components/sections/FAQ';
 
 export const metadata: Metadata = {
-  title: 'Pricing | Web Design & Development Packages',
+  title: { absolute: 'Website Pricing & Packages | Cowebing' },
   description:
-    'Transparent pricing for custom website design, development, and hosting. Starter, Business, and Premium packages available. Schedule a free consultation.',
+    'Simple, transparent pricing for custom websites. Starter, Business, and Premium packages with no hidden fees — includes design, development, hosting setup, and ongoing support.',
   alternates: { canonical: 'https://cowebing.com/pricing' },
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://cowebing.com/pricing',
+    siteName: 'Cowebing',
+    title: 'Website Pricing & Packages | Cowebing',
+    description:
+      'Simple, transparent pricing for custom websites. Starter, Business, and Premium packages with no hidden fees — includes design, development, hosting setup, and ongoing support.',
+    images: [
+      {
+        url: '/images/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Cowebing Pricing — Website Packages & Plans',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Website Pricing & Packages | Cowebing',
+    description:
+      'Simple, transparent pricing for custom websites. Starter, Business, and Premium packages with no hidden fees — design, development, hosting, and support included.',
+    images: ['/images/og-image.png'],
+    creator: '@cowebing',
+  },
 };
 
 export default function PricingPage() {

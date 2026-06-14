@@ -6,10 +6,35 @@ import Footer from '@/components/layout/Footer';
 import { blogPosts } from '@/lib/data/blog';
 
 export const metadata: Metadata = {
-  title: 'Blog | Web Design & Digital Marketing Insights',
+  title: { absolute: 'Blog | Web Design & Business Growth Tips | Cowebing' },
   description:
-    'Expert insights on web design, website hosting, SEO, and digital growth strategies to help businesses build a powerful online presence.',
+    'Practical tips and expert insights on web design, website hosting, SEO, and digital growth — written for business owners who want to build a powerful online presence and attract more customers.',
   alternates: { canonical: 'https://cowebing.com/blog' },
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://cowebing.com/blog',
+    siteName: 'Cowebing',
+    title: 'Blog | Web Design & Business Growth Tips | Cowebing',
+    description:
+      'Practical tips and expert insights on web design, website hosting, SEO, and digital growth — written for business owners who want to build a powerful online presence and attract more customers.',
+    images: [
+      {
+        url: '/images/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Cowebing Blog — Web Design & Business Growth',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Blog | Web Design & Business Growth Tips | Cowebing',
+    description:
+      'Practical tips on web design, hosting, SEO, and digital growth — written for business owners who want a powerful online presence.',
+    images: ['/images/og-image.png'],
+    creator: '@cowebing',
+  },
 };
 
 const categories = ['All', 'Web Design', 'Hosting', 'SEO'];

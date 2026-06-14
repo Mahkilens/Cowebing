@@ -7,10 +7,35 @@ import { portfolioProjects } from '@/lib/data/portfolio';
 import PortfolioVideoCard from '@/components/ui/PortfolioVideoCard';
 
 export const metadata: Metadata = {
-  title: 'Portfolio | Web Design Projects',
+  title: { absolute: 'Portfolio | Real Websites Built by Cowebing' },
   description:
-    'Explore Cowebing\'s portfolio of custom web design and development projects. Real websites built for real businesses across the United States.',
+    'See real websites built by Cowebing for real businesses. Custom web design projects for beauty brands, professional services, e-commerce, and technology companies across the United States.',
   alternates: { canonical: 'https://cowebing.com/portfolio' },
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://cowebing.com/portfolio',
+    siteName: 'Cowebing',
+    title: 'Portfolio | Real Websites Built by Cowebing',
+    description:
+      'See real websites built by Cowebing for real businesses. Custom web design projects for beauty brands, professional services, e-commerce, and technology companies across the United States.',
+    images: [
+      {
+        url: '/images/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Cowebing Portfolio — Custom Website Projects',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Portfolio | Real Websites Built by Cowebing',
+    description:
+      'See real websites built by Cowebing for real businesses. Custom web design projects for beauty brands, professional services, e-commerce, and tech companies.',
+    images: ['/images/og-image.png'],
+    creator: '@cowebing',
+  },
 };
 
 export default function PortfolioPage() {
