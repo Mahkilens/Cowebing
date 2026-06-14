@@ -3,4 +3,5 @@
 node_modules
 .DS_Store
 Image/videos
-public/videos
+public/videos/*.mov
+public/videos/diamond-raw-hair.mp4

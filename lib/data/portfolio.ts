@@ -73,7 +73,7 @@ export const portfolioProjects: PortfolioProject[] = [
       'SEO-optimized product pages',
       'WhatsApp/contact ordering integration',
     ],
-    videoSrc: '/videos/diamond-raw-hair.mp4',
+    videoSrc: '/videos/DiamondRawHairBoutique.mp4',
     technologies: ['Next.js', 'React', 'TailwindCSS', 'Vercel'],
     results: [
       { metric: 'Premium Brand', description: 'Editorial-level visual identity' },
@@ -107,7 +107,7 @@ export const portfolioProjects: PortfolioProject[] = [
       'Google Maps integration',
       'Clear call-to-action throughout',
     ],
-    videoSrc: '/videos/erika-scott-office.mov',
+    videoSrc: '/videos/ErikaScottOffice.mp4',
     technologies: ['Next.js', 'React', 'TailwindCSS', 'Vercel'],
     results: [
       { metric: 'Lead Generation', description: 'Optimized for qualified inquiries' },
@@ -141,7 +141,7 @@ export const portfolioProjects: PortfolioProject[] = [
       'Performance-optimized rendering',
       'SEO and structured data markup',
     ],
-    videoSrc: '/videos/ai-market-intel.mov',
+    videoSrc: '/videos/AI-Market-Intec-App.mp4',
     technologies: ['Next.js', 'React', 'TailwindCSS', 'TypeScript', 'Framer Motion', 'Vercel'],
     results: [
       { metric: 'SaaS Design', description: 'Enterprise-grade product interface' },

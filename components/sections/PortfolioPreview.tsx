@@ -2,14 +2,13 @@
 
 import { motion, useInView, AnimatePresence } from 'framer-motion';
 import { useRef, useState, useEffect, useCallback } from 'react';
-import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
 
 const projects = [
   {
     id: 'ai-market-intel',
-    img: '/images/ai-market-intel.png',
+    videoSrc: '/videos/AI-Market-Intec-App.mp4',
     title: 'AI Market Intelligence App',
     label: 'AI-powered market intelligence dashboard',
     slug: 'ai-market-intelligence-engine',
@@ -18,7 +17,7 @@ const projects = [
   },
   {
     id: 'diamond-raw-hair',
-    img: '/images/diamond-raw-hair.png',
+    videoSrc: '/videos/DiamondRawHairBoutique.mp4',
     title: 'Diamond Raw Hair Boutique',
     label: 'Beauty business website',
     slug: 'diamond-raw-hair-boutique',
@@ -27,7 +26,7 @@ const projects = [
   },
   {
     id: 'erika-scott-office',
-    img: '/images/erika-scott-official.png',
+    videoSrc: '/videos/ErikaScottOffice.mp4',
     title: 'Erika Scott Office',
     label: 'Professional service website',
     slug: 'erika-scott-office',
@@ -36,7 +35,7 @@ const projects = [
   },
   {
     id: 'j-adore-lips',
-    img: '/images/j-adore-lips.png',
+    videoSrc: '/videos/j-adore-lips.mp4',
     title: 'J-Adore Lips',
     label: 'Beauty brand website',
     slug: 'j-adore-lips',
@@ -191,14 +190,24 @@ export default function PortfolioPreview() {
                   transition={{ duration: 0.45, ease: [0.32, 0.72, 0, 1] }}
                   className="absolute inset-0 w-full h-full"
                 >
-                  <Image
-                    src={active.img}
-                    alt={active.title}
-                    fill
-                    className="object-cover object-top"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 896px"
-                    priority={activeIndex === 0}
-                  />
+                  <video
+                    key={active.videoSrc}
+                    autoPlay
+                    muted
+                    playsInline
+                    loop
+                    preload="metadata"
+                    style={{
+                      position: 'absolute',
+                      inset: 0,
+                      width: '100%',
+                      height: '100%',
+                      objectFit: 'cover',
+                      display: 'block',
+                    }}
+                  >
+                    <source src={active.videoSrc} type="video/mp4" />
+                  </video>
                 </motion.div>
               </AnimatePresence>
 
