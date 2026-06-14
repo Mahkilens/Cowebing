@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     default: 'Cowebing | Custom Websites, Hosting & Digital Growth',
   },
   description:
-    'Cowebing helps businesses establish a powerful online presence through custom websites, hosting, maintenance, branding, and digital growth solutions.',
+    'Cowebing helps businesses grow with custom websites, reliable hosting, booking systems, SEO, and digital solutions designed to attract customers and drive results.',
   manifest: '/site.webmanifest',
   icons: {
     icon: [
@@ -28,18 +28,18 @@ export const metadata: Metadata = {
     ],
   },
   keywords: [
-    'web design',
-    'website development',
-    'custom websites',
+    'website design',
+    'web development',
+    'website hosting',
     'business websites',
     'small business websites',
-    'website hosting',
-    'website maintenance',
-    'digital solutions',
-    'online presence',
-    'branding',
-    'website redesign',
+    'booking websites',
     'professional websites',
+    'SEO services',
+    'digital growth',
+    'custom websites',
+    'online presence',
+    'Cowebing',
   ],
   authors: [{ name: 'Marquis Prescott', url: 'https://cowebing.com' }],
   creator: 'Cowebing',
@@ -62,7 +62,7 @@ export const metadata: Metadata = {
     siteName: 'Cowebing',
     title: 'Cowebing | Custom Websites, Hosting & Digital Growth',
     description:
-      'Cowebing helps businesses establish a powerful online presence through custom websites, hosting, maintenance, branding, and digital growth solutions.',
+      'Cowebing helps businesses grow with custom websites, reliable hosting, booking systems, SEO, and digital solutions designed to attract customers and drive results.',
     images: [
       {
         url: '/images/og-image.png',
@@ -76,7 +76,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Cowebing | Custom Websites, Hosting & Digital Growth',
     description:
-      'Cowebing helps businesses establish a powerful online presence through custom websites, hosting, maintenance, branding, and digital growth solutions.',
+      'Cowebing helps businesses grow with custom websites, reliable hosting, booking systems, SEO, and digital solutions designed to attract customers and drive results.',
     images: ['/images/og-image.png'],
     creator: '@cowebing',
   },
@@ -101,7 +101,7 @@ const structuredData = {
       },
       image: 'https://cowebing.com/images/og-image.png',
       description:
-        'Cowebing helps businesses establish a powerful online presence through custom websites, hosting, maintenance, branding, and digital growth solutions.',
+        'Cowebing helps businesses grow with custom websites, reliable hosting, booking systems, SEO, and digital solutions designed to attract customers and drive results.',
       foundingDate: '2024',
       founder: {
         '@type': 'Person',
@@ -130,7 +130,7 @@ const structuredData = {
       url: 'https://cowebing.com',
       name: 'Cowebing',
       description:
-        'Cowebing helps businesses establish a powerful online presence through custom websites, hosting, maintenance, branding, and digital growth solutions.',
+        'Cowebing helps businesses grow with custom websites, reliable hosting, booking systems, SEO, and digital solutions designed to attract customers and drive results.',
       publisher: {
         '@id': 'https://cowebing.com/#organization',
       },
