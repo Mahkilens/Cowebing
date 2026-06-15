@@ -169,15 +169,15 @@ export default function AboutPage() {
                 {/* Founder photos */}
                 <div className="grid grid-cols-2 gap-3 mb-5">
                   <div
-                    className="relative rounded-2xl overflow-hidden"
-                    style={{ height: '280px', border: '1px solid rgba(123,47,247,0.25)' }}
+                    className="relative h-48 sm:h-60 lg:h-72 rounded-2xl overflow-hidden"
+                    style={{ border: '1px solid rgba(123,47,247,0.25)' }}
                   >
                     <Image
                       src="/images/marquis-prescott.jpeg"
                       alt="Marquis Prescott, Founder of Cowebing"
                       fill
                       className="object-cover object-top"
-                      sizes="(max-width: 768px) 50vw, 280px"
+                      sizes="(max-width: 640px) 45vw, (max-width: 1024px) 35vw, 260px"
                       priority
                     />
                     <div
@@ -190,15 +190,15 @@ export default function AboutPage() {
                     </div>
                   </div>
                   <div
-                    className="relative rounded-2xl overflow-hidden"
-                    style={{ height: '280px', border: '1px solid rgba(37,99,255,0.2)' }}
+                    className="relative h-48 sm:h-60 lg:h-72 rounded-2xl overflow-hidden"
+                    style={{ border: '1px solid rgba(37,99,255,0.2)' }}
                   >
                     <Image
                       src="/images/marquis-prescott-2.jpeg"
                       alt="Marquis Prescott working on a project"
                       fill
                       className="object-cover object-top"
-                      sizes="(max-width: 768px) 50vw, 280px"
+                      sizes="(max-width: 640px) 45vw, (max-width: 1024px) 35vw, 260px"
                     />
                     <div
                       className="absolute inset-0 pointer-events-none"
