@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, ArrowRight } from 'lucide-react';
@@ -40,13 +41,15 @@ export default function Navbar() {
     >
       <nav className="container-custom flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2.5 group">
-          <div className="relative">
-            <div
-              className="w-9 h-9 rounded-xl flex items-center justify-center text-white font-black text-base shadow-brand-sm transition-all duration-300 group-hover:shadow-brand"
-              style={{ background: 'linear-gradient(135deg, #7B2FF7 0%, #2563FF 100%)' }}
-            >
-              C
-            </div>
+          <div className="relative w-9 h-9 flex-shrink-0">
+            <Image
+              src="/images/cowebing-logo.png"
+              alt="Cowebing"
+              width={36}
+              height={36}
+              className="rounded-xl shadow-brand-sm transition-all duration-300 group-hover:shadow-brand"
+              priority
+            />
           </div>
           <span className="text-xl font-black tracking-wide">
             <span className="gradient-text">COWE</span>

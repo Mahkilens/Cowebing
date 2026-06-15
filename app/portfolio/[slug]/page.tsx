@@ -22,8 +22,27 @@ export async function generateMetadata({
     description: project.description,
     alternates: { canonical: `https://cowebing.com/portfolio/${project.slug}` },
     openGraph: {
+      type: 'website',
+      locale: 'en_US',
+      url: `https://cowebing.com/portfolio/${project.slug}`,
+      siteName: 'Cowebing',
       title: `${project.title} — Cowebing Case Study`,
       description: project.description,
+      images: [
+        {
+          url: project.thumbnail,
+          width: 1200,
+          height: 630,
+          alt: `${project.title} — Built by Cowebing`,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image' as const,
+      title: `${project.title} — Cowebing Case Study`,
+      description: project.description,
+      images: [project.thumbnail],
+      creator: '@cowebing',
     },
   };
 }

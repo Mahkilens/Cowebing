@@ -13,6 +13,7 @@ export interface PortfolioProject {
   color: string;
   accentColor: string;
   videoSrc: string;
+  thumbnail: string;
 }
 
 export const portfolioProjects: PortfolioProject[] = [
@@ -40,6 +41,7 @@ export const portfolioProjects: PortfolioProject[] = [
       'Clear calls-to-action driving consultations',
     ],
     videoSrc: '/videos/j-adore-lips.mp4',
+    thumbnail: '/images/j-adore-lips.png',
     technologies: ['Next.js', 'React', 'TailwindCSS', 'Vercel', 'Booking Integration'],
     results: [
       { metric: '3–5 Day Turnaround', description: 'From brief to live website' },
@@ -74,6 +76,7 @@ export const portfolioProjects: PortfolioProject[] = [
       'WhatsApp/contact ordering integration',
     ],
     videoSrc: '/videos/DiamondRawHairBoutique.mp4',
+    thumbnail: '/images/diamond-raw-hair.png',
     technologies: ['Next.js', 'React', 'TailwindCSS', 'Vercel'],
     results: [
       { metric: 'Premium Brand', description: 'Editorial-level visual identity' },
@@ -108,6 +111,7 @@ export const portfolioProjects: PortfolioProject[] = [
       'Clear call-to-action throughout',
     ],
     videoSrc: '/videos/ErikaScottOffice.mp4',
+    thumbnail: '/images/erika-scott-official.png',
     technologies: ['Next.js', 'React', 'TailwindCSS', 'Vercel'],
     results: [
       { metric: 'Lead Generation', description: 'Optimized for qualified inquiries' },
@@ -142,6 +146,7 @@ export const portfolioProjects: PortfolioProject[] = [
       'SEO and structured data markup',
     ],
     videoSrc: '/videos/AI-Market-Intec-App.mp4',
+    thumbnail: '/images/ai-market-intel.png',
     technologies: ['Next.js', 'React', 'TailwindCSS', 'TypeScript', 'Framer Motion', 'Vercel'],
     results: [
       { metric: 'SaaS Design', description: 'Enterprise-grade product interface' },

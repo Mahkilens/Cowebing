@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import { ArrowRight, GraduationCap, MapPin, Code2, TrendingUp, Users, Target, Lightbulb, Heart, CheckCircle2 } from 'lucide-react';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
@@ -165,19 +166,47 @@ export default function AboutPage() {
               </div>
 
               <div>
-                <div
-                  className="w-full h-80 rounded-2xl flex items-center justify-center mb-6"
-                  style={{ background: 'linear-gradient(135deg, #041B4D 0%, #0a0a2a 100%)' }}
-                >
-                  <div className="text-center">
+                {/* Founder photos */}
+                <div className="grid grid-cols-2 gap-3 mb-5">
+                  <div
+                    className="relative rounded-2xl overflow-hidden"
+                    style={{ height: '280px', border: '1px solid rgba(123,47,247,0.25)' }}
+                  >
+                    <Image
+                      src="/images/marquis-prescott.jpeg"
+                      alt="Marquis Prescott, Founder of Cowebing"
+                      fill
+                      className="object-cover object-top"
+                      sizes="(max-width: 768px) 50vw, 280px"
+                      priority
+                    />
                     <div
-                      className="w-24 h-24 rounded-2xl mx-auto mb-4 flex items-center justify-center text-white font-black text-4xl shadow-brand"
-                      style={{ background: 'linear-gradient(135deg, #7B2FF7 0%, #2563FF 100%)' }}
-                    >
-                      MP
+                      className="absolute inset-0 pointer-events-none"
+                      style={{ background: 'linear-gradient(to top, rgba(4,27,77,0.75) 0%, transparent 55%)' }}
+                    />
+                    <div className="absolute bottom-3 left-3">
+                      <p className="text-white font-bold text-xs">Marquis Prescott</p>
+                      <p className="text-white/60 text-xs">Founder &amp; Lead Dev</p>
                     </div>
-                    <p className="text-white font-bold">Marquis Prescott</p>
-                    <p className="text-white/40 text-sm">Founder & Lead Developer</p>
+                  </div>
+                  <div
+                    className="relative rounded-2xl overflow-hidden"
+                    style={{ height: '280px', border: '1px solid rgba(37,99,255,0.2)' }}
+                  >
+                    <Image
+                      src="/images/marquis-prescott-2.jpeg"
+                      alt="Marquis Prescott working on a project"
+                      fill
+                      className="object-cover object-top"
+                      sizes="(max-width: 768px) 50vw, 280px"
+                    />
+                    <div
+                      className="absolute inset-0 pointer-events-none"
+                      style={{ background: 'linear-gradient(to top, rgba(4,27,77,0.6) 0%, transparent 55%)' }}
+                    />
+                    <div className="absolute bottom-3 left-3">
+                      <p className="text-white/70 text-xs">Cowebing</p>
+                    </div>
                   </div>
                 </div>
                 <div

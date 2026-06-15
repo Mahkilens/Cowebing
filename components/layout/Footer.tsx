@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { ArrowRight, Mail, Instagram, Linkedin, Facebook, Twitter, MapPin } from 'lucide-react';
 
 const footerLinks = {
@@ -41,11 +42,14 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-12">
           <div className="lg:col-span-2">
             <Link href="/" className="flex items-center gap-2.5 group mb-5 w-fit">
-              <div
-                className="w-9 h-9 rounded-xl flex items-center justify-center text-white font-black text-base"
-                style={{ background: 'linear-gradient(135deg, #7B2FF7 0%, #2563FF 100%)' }}
-              >
-                C
+              <div className="relative w-9 h-9 flex-shrink-0">
+                <Image
+                  src="/images/cowebing-logo.png"
+                  alt="Cowebing"
+                  width={36}
+                  height={36}
+                  className="rounded-xl"
+                />
               </div>
               <span className="text-xl font-black tracking-wide">
                 <span className="gradient-text">COWE</span>

@@ -11,6 +11,7 @@ interface Project {
   technologies: string[];
   color: string;
   videoSrc: string;
+  thumbnail: string;
 }
 
 export default function PortfolioVideoCard({ project }: { project: Project }) {
@@ -36,6 +37,7 @@ export default function PortfolioVideoCard({ project }: { project: Project }) {
         >
           <video
             src={project.videoSrc}
+            poster={project.thumbnail}
             autoPlay
             muted
             playsInline

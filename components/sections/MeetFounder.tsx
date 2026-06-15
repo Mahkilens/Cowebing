@@ -3,6 +3,7 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import {
   ArrowRight,
   MessageCircle,
@@ -103,10 +104,16 @@ export default function MeetFounder() {
             {/* Avatar */}
             <div className="flex-shrink-0 mx-auto md:mx-0">
               <div
-                className="w-24 h-24 rounded-2xl flex items-center justify-center text-white font-black text-3xl"
-                style={{ background: 'linear-gradient(135deg, #7B2FF7 0%, #2563FF 100%)' }}
+                className="relative w-24 h-24 rounded-2xl overflow-hidden"
+                style={{ border: '2px solid rgba(123,47,247,0.4)' }}
               >
-                MP
+                <Image
+                  src="/images/marquis-prescott.jpeg"
+                  alt="Marquis Prescott, Founder of Cowebing"
+                  fill
+                  className="object-cover object-top"
+                  sizes="96px"
+                />
               </div>
               <div className="mt-3 text-center md:text-left">
                 <p className="text-white font-bold text-sm">Marquis Prescott</p>
