@@ -94,71 +94,101 @@ export default function MeetFounder() {
           className="max-w-4xl mx-auto mb-20"
         >
           <div
-            className="rounded-2xl p-8 md:p-10 flex flex-col md:flex-row gap-8 items-start"
+            className="rounded-2xl overflow-hidden"
             style={{
               background: 'rgba(255,255,255,0.03)',
-              border: '1px solid rgba(255,255,255,0.08)',
-              boxShadow: '0 8px 40px rgba(0,0,0,0.4)',
+              border: '1px solid rgba(123,47,247,0.22)',
+              boxShadow: '0 8px 48px rgba(0,0,0,0.5), 0 0 60px rgba(123,47,247,0.08)',
             }}
           >
-            {/* Avatar */}
-            <div className="flex-shrink-0 mx-auto md:mx-0">
+            <div className="flex flex-col lg:flex-row">
+
+              {/* ── Portrait Photo ── */}
               <div
-                className="relative w-24 h-24 rounded-2xl overflow-hidden"
-                style={{ border: '2px solid rgba(123,47,247,0.4)' }}
+                className="relative flex-shrink-0 lg:w-64 xl:w-72"
+                style={{ minHeight: '320px' }}
               >
                 <Image
                   src="/images/marquis-prescott.jpeg"
                   alt="Marquis Prescott, Founder of Cowebing"
                   fill
                   className="object-cover object-top"
-                  sizes="96px"
+                  sizes="(max-width: 1024px) 100vw, 288px"
                 />
+                {/* Bottom-to-top dark gradient */}
+                <div
+                  className="absolute inset-0 pointer-events-none"
+                  style={{
+                    background:
+                      'linear-gradient(to top, rgba(7,11,26,0.97) 0%, rgba(7,11,26,0.45) 28%, transparent 58%)',
+                  }}
+                />
+                {/* Right-edge fade into content panel (desktop only) */}
+                <div
+                  className="hidden lg:block absolute inset-0 pointer-events-none"
+                  style={{
+                    background:
+                      'linear-gradient(to right, transparent 55%, rgba(7,11,26,0.9) 100%)',
+                  }}
+                />
+                {/* Subtle purple inner glow */}
+                <div
+                  className="absolute inset-0 pointer-events-none"
+                  style={{ boxShadow: 'inset 0 0 48px rgba(123,47,247,0.1)' }}
+                />
+                {/* Name badge — mobile only */}
+                <div className="absolute bottom-5 left-5 lg:hidden">
+                  <p className="text-white font-black text-lg leading-tight">Marquis Prescott</p>
+                  <p className="text-[#9B4FF9] text-sm font-semibold mt-0.5">Founder · Cowebing</p>
+                </div>
               </div>
-              <div className="mt-3 text-center md:text-left">
-                <p className="text-white font-bold text-sm">Marquis Prescott</p>
-                <p className="text-white/40 text-xs">Founder, Cowebing</p>
-              </div>
-            </div>
 
-            {/* Bio */}
-            <div className="flex-1">
-              <p className="text-white/75 text-base leading-relaxed mb-5">
-                Hi, I&apos;m Marquis Prescott, founder of Cowebing. I created Cowebing to help
-                businesses establish a professional online presence through modern websites,
-                reliable hosting, and ongoing support.
-              </p>
-              <p className="text-white/75 text-base leading-relaxed mb-5">
-                As an Information Technology graduate from Keiser University and a current
-                Data Science &amp; Analytics student at Florida Atlantic University, I combine
-                technical expertise with a business-focused approach to create websites that
-                look professional, perform well, and help businesses grow.
-              </p>
-              <p className="text-white/75 text-base leading-relaxed mb-7">
-                Every project is built with attention to detail, direct communication, and a
-                commitment to helping clients succeed online.
-              </p>
+              {/* ── Bio Content ── */}
+              <div className="flex-1 p-8 md:p-10 flex flex-col justify-center">
+                {/* Name header — desktop only */}
+                <div className="hidden lg:block mb-6">
+                  <h3 className="text-2xl font-black text-white leading-tight">Marquis Prescott</h3>
+                  <p className="text-[#9B4FF9] font-semibold text-sm mt-1">Founder &amp; Lead Developer · Cowebing</p>
+                </div>
 
-              {/* Education badges */}
-              <div className="flex flex-wrap gap-3">
-                {[
-                  'B.S. Information Technology — Keiser University',
-                  'Data Science & Analytics — Florida Atlantic University',
-                ].map((edu) => (
-                  <div
-                    key={edu}
-                    className="flex items-center gap-2 text-xs font-medium px-3 py-1.5 rounded-full"
-                    style={{
-                      background: 'rgba(123,47,247,0.12)',
-                      border: '1px solid rgba(123,47,247,0.22)',
-                      color: '#9B4FF9',
-                    }}
-                  >
-                    <GraduationCap className="w-3.5 h-3.5" />
-                    {edu}
-                  </div>
-                ))}
+                <p className="text-white/75 text-base leading-relaxed mb-5">
+                  Hi, I&apos;m Marquis Prescott, founder of Cowebing. I created Cowebing to help
+                  businesses establish a professional online presence through modern websites,
+                  reliable hosting, and ongoing support.
+                </p>
+                <p className="text-white/75 text-base leading-relaxed mb-5">
+                  As an Information Technology graduate from Keiser University and a current
+                  Data Science &amp; Analytics student at Florida Atlantic University, I combine
+                  technical expertise with a business-focused approach to create websites that
+                  look professional, perform well, and help businesses grow.
+                </p>
+                <p className="text-white/75 text-base leading-relaxed mb-7">
+                  Every project is built with attention to detail, direct communication, and a
+                  commitment to helping clients succeed online.
+                </p>
+
+                {/* Education badges */}
+                <div className="flex flex-wrap gap-3">
+                  {[
+                    'B.S. Information Technology — Keiser University',
+                    'Data Science & Analytics — Florida Atlantic University',
+                  ].map((edu) => (
+                    <div
+                      key={edu}
+                      className="flex items-center gap-2 text-xs font-medium px-3 py-1.5 rounded-full"
+                      style={{
+                        background: 'rgba(123,47,247,0.12)',
+                        border: '1px solid rgba(123,47,247,0.22)',
+                        color: '#9B4FF9',
+                      }}
+                    >
+                      <GraduationCap className="w-3.5 h-3.5" />
+                      {edu}
+                    </div>
+                  ))}
+                </div>
               </div>
+
             </div>
           </div>
         </motion.div>

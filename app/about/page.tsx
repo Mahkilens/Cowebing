@@ -166,64 +166,81 @@ export default function AboutPage() {
               </div>
 
               <div>
-                {/* Founder photos */}
-                <div className="grid grid-cols-2 gap-3 mb-5">
+                {/* Primary founder photo — full-width portrait hero */}
+                <div
+                  className="relative w-full h-80 sm:h-96 lg:h-[440px] rounded-2xl overflow-hidden mb-4"
+                  style={{
+                    border: '2px solid rgba(123,47,247,0.35)',
+                    boxShadow:
+                      '0 0 0 1px rgba(37,99,255,0.15), 0 0 56px rgba(123,47,247,0.14), 0 24px 64px rgba(0,0,0,0.35)',
+                  }}
+                >
+                  <Image
+                    src="/images/marquis-prescott.jpeg"
+                    alt="Marquis Prescott, Founder of Cowebing"
+                    fill
+                    className="object-cover object-top"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 600px"
+                    priority
+                  />
+                  {/* Bottom gradient overlay */}
                   <div
-                    className="relative h-48 sm:h-60 lg:h-72 rounded-2xl overflow-hidden"
-                    style={{ border: '1px solid rgba(123,47,247,0.25)' }}
-                  >
-                    <Image
-                      src="/images/marquis-prescott.jpeg"
-                      alt="Marquis Prescott, Founder of Cowebing"
-                      fill
-                      className="object-cover object-top"
-                      sizes="(max-width: 640px) 45vw, (max-width: 1024px) 35vw, 260px"
-                      priority
-                    />
-                    <div
-                      className="absolute inset-0 pointer-events-none"
-                      style={{ background: 'linear-gradient(to top, rgba(4,27,77,0.75) 0%, transparent 55%)' }}
-                    />
-                    <div className="absolute bottom-3 left-3">
-                      <p className="text-white font-bold text-xs">Marquis Prescott</p>
-                      <p className="text-white/60 text-xs">Founder &amp; Lead Dev</p>
-                    </div>
+                    className="absolute inset-0 pointer-events-none"
+                    style={{
+                      background:
+                        'linear-gradient(to top, rgba(4,27,77,0.92) 0%, rgba(4,27,77,0.35) 35%, transparent 62%)',
+                    }}
+                  />
+                  {/* Subtle purple inner glow */}
+                  <div
+                    className="absolute inset-0 pointer-events-none"
+                    style={{ boxShadow: 'inset 0 0 60px rgba(123,47,247,0.1)' }}
+                  />
+                  {/* Name badge */}
+                  <div className="absolute bottom-5 left-5">
+                    <p className="text-white font-black text-lg leading-tight">Marquis Prescott</p>
+                    <p className="text-white/65 text-sm mt-0.5">Founder &amp; Lead Developer · Cowebing</p>
                   </div>
+                </div>
+
+                {/* Secondary row: photo + quote */}
+                <div className="grid grid-cols-2 gap-4">
                   <div
-                    className="relative h-48 sm:h-60 lg:h-72 rounded-2xl overflow-hidden"
-                    style={{ border: '1px solid rgba(37,99,255,0.2)' }}
+                    className="relative h-40 sm:h-48 rounded-xl overflow-hidden"
+                    style={{
+                      border: '1px solid rgba(37,99,255,0.3)',
+                      boxShadow: '0 0 24px rgba(37,99,255,0.08)',
+                    }}
                   >
                     <Image
                       src="/images/marquis-prescott-2.jpeg"
-                      alt="Marquis Prescott working on a project"
+                      alt="Marquis Prescott working"
                       fill
                       className="object-cover object-top"
-                      sizes="(max-width: 640px) 45vw, (max-width: 1024px) 35vw, 260px"
+                      sizes="(max-width: 640px) 45vw, 280px"
                     />
                     <div
                       className="absolute inset-0 pointer-events-none"
-                      style={{ background: 'linear-gradient(to top, rgba(4,27,77,0.6) 0%, transparent 55%)' }}
+                      style={{
+                        background: 'linear-gradient(to top, rgba(4,27,77,0.7) 0%, transparent 55%)',
+                      }}
                     />
-                    <div className="absolute bottom-3 left-3">
-                      <p className="text-white/70 text-xs">Cowebing</p>
-                    </div>
                   </div>
-                </div>
-                <div
-                  className="glass-card rounded-2xl p-6"
-                  style={{
-                    background: 'linear-gradient(135deg, #041B4D, #0A0A0A)',
-                    border: '1px solid rgba(255,255,255,0.08)',
-                  }}
-                >
-                  <p className="text-white/70 text-sm leading-relaxed italic">
-                    &ldquo;I built Cowebing because I wanted to create a web design experience
-                    that actually puts the business owner first — real communication, real
-                    craftsmanship, and results you can see.&rdquo;
-                  </p>
-                  <p className="text-[#9B4FF9] text-sm font-semibold mt-3">
-                    — Marquis Prescott, Founder
-                  </p>
+                  <div
+                    className="rounded-xl p-4 sm:p-5 flex flex-col justify-center"
+                    style={{
+                      background: 'linear-gradient(135deg, #041B4D 0%, #0A0A0A 100%)',
+                      border: '1px solid rgba(255,255,255,0.08)',
+                    }}
+                  >
+                    <p className="text-white/70 text-xs sm:text-sm leading-relaxed italic">
+                      &ldquo;I built Cowebing to put the business owner first — real
+                      communication, real craftsmanship, and results you can see.&rdquo;
+                    </p>
+                    <p className="text-[#9B4FF9] text-xs font-semibold mt-3">
+                      — Marquis Prescott, Founder
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
