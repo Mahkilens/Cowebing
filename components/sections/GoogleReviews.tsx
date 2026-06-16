@@ -126,7 +126,7 @@ export default function GoogleReviews() {
           className="mt-10 text-center"
         >
           <a
-            href="https://g.page/cowebing/review"
+            href="https://g.page/r/Cdzk1g1qSNncEBI/review"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-sm font-semibold text-[#7B2FF7] hover:text-[#5B1FD4] transition-colors"

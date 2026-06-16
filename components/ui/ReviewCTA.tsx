@@ -5,7 +5,7 @@ import { useRef } from 'react';
 import { Star, ExternalLink } from 'lucide-react';
 
 const GOOGLE_REVIEW_URL =
-  'https://g.page/r/cowebing/review';
+  'https://g.page/r/Cdzk1g1qSNncEBI/review';
 
 export default function ReviewCTA() {
   const ref = useRef<HTMLDivElement>(null);
