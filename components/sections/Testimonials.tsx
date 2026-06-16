@@ -61,7 +61,7 @@ export default function Testimonials() {
             transition={{ duration: 0.5 }}
             className="section-label mb-4 inline-flex"
           >
-            Client Stories
+            Real Business Growth
           </motion.span>
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -69,8 +69,8 @@ export default function Testimonials() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-4xl md:text-5xl font-black text-white mt-4 mb-4"
           >
-            What Our Clients{' '}
-            <span className="gradient-text">Say</span>
+            Businesses Growing With{' '}
+            <span className="gradient-text">Cowebing</span>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 16 }}
@@ -78,8 +78,8 @@ export default function Testimonials() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-lg text-white/50 max-w-xl mx-auto"
           >
-            Real feedback from real business owners who trusted Cowebing to build and grow
-            their online presence.
+            Real feedback from business owners who trusted Cowebing to help them get found
+            online, build trust, and win more customers.
           </motion.p>
         </div>
 

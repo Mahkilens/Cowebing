@@ -4,70 +4,60 @@ import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 import Link from 'next/link';
 import {
-  Palette,
-  Code2,
-  Server,
-  Wrench,
+  Monitor,
   Search,
-  TrendingUp,
+  Users,
+  Star,
+  Server,
   ArrowRight,
   CheckCircle2,
 } from 'lucide-react';
 
 const services = [
   {
-    icon: Palette,
-    title: 'Website Design',
+    icon: Monitor,
+    title: 'Professional Websites',
     description:
-      'Custom, brand-aligned designs that make powerful first impressions and convert visitors into customers.',
-    benefits: ['Custom visual identity', 'Mobile-first layouts', 'Conversion-focused UX'],
+      'Professional websites designed to help customers find, trust, and contact your business. Every site we build is a growth tool — not just a digital brochure.',
+    benefits: ['Customer trust & credibility', 'Mobile-first, conversion-focused', 'Built to attract & retain customers'],
     color: '#7B2FF7',
-    href: '/services#design',
-  },
-  {
-    icon: Code2,
-    title: 'Website Development',
-    description:
-      'Clean, fast, production-ready code built on modern technology stacks that scale with your business.',
-    benefits: ['Next.js & React', 'Performance optimized', 'Secure & maintainable'],
-    color: '#2563FF',
-    href: '/services#development',
-  },
-  {
-    icon: Server,
-    title: 'Website Hosting',
-    description:
-      'Reliable, enterprise-grade hosting with 99.9% uptime — one roof for your website and hosting needs.',
-    benefits: ['99.9% uptime SLA', 'SSL certificates included', 'Daily backups'],
-    color: '#059669',
-    href: '/services#hosting',
-  },
-  {
-    icon: Wrench,
-    title: 'Website Maintenance',
-    description:
-      'Ongoing updates, performance monitoring, and support so your website always runs at its best.',
-    benefits: ['Regular updates & patches', 'Performance monitoring', 'Priority support'],
-    color: '#D97706',
-    href: '/services#maintenance',
+    href: '/services#websites',
   },
   {
     icon: Search,
-    title: 'SEO Foundations',
+    title: 'Google Visibility',
     description:
-      'Every website we build is optimized for search — helping your business get found by the right customers.',
-    benefits: ['On-page SEO structure', 'Local search optimization', 'Schema markup'],
-    color: '#DC2626',
-    href: '/services#seo',
+      'Help potential customers discover your business when they are actively searching online. Appear in front of people who are already looking for what you offer.',
+    benefits: ['Local SEO optimization', 'Google Business integration', 'Schema markup & search structure'],
+    color: '#2563FF',
+    href: '/services#visibility',
   },
   {
-    icon: TrendingUp,
-    title: 'Business Growth Solutions',
+    icon: Users,
+    title: 'Lead Generation Systems',
     description:
-      'Strategic digital solutions designed to help your business attract more customers and grow online revenue.',
-    benefits: ['Lead generation systems', 'Booking integrations', 'Conversion optimization'],
-    color: '#7B2FF7',
-    href: '/services#growth',
+      'Turn website visitors into inquiries, consultations, appointments, and customers. Built-in systems that capture interest and move people to action.',
+    benefits: ['Contact forms & lead capture', 'Booking system integration', 'Conversion-optimized layouts'],
+    color: '#059669',
+    href: '/services#leads',
+  },
+  {
+    icon: Star,
+    title: 'Reputation Management',
+    description:
+      'Build trust through reviews, social proof, and a reputation that attracts new customers. The most powerful marketing is what other people say about you.',
+    benefits: ['Review collection systems', 'Google review integration', 'Social proof display'],
+    color: '#D97706',
+    href: '/services#reputation',
+  },
+  {
+    icon: Server,
+    title: 'Hosting & Ongoing Support',
+    description:
+      'Keep your business online, secure, and available to customers 24/7. Reliable infrastructure so you can focus on running your business — not managing your website.',
+    benefits: ['99.9% uptime guaranteed', 'SSL certificates & daily backups', 'Priority support & updates'],
+    color: '#DC2626',
+    href: '/services#hosting',
   },
 ];
 
@@ -85,7 +75,7 @@ export default function Services() {
             transition={{ duration: 0.5 }}
             className="section-label-light mb-4 inline-flex"
           >
-            What We Do
+            Five Growth Pillars
           </motion.span>
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -93,8 +83,8 @@ export default function Services() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-4xl md:text-5xl font-black text-[#0A0A0A] mt-4 mb-4"
           >
-            Everything Your Business{' '}
-            <span className="gradient-text">Needs Online</span>
+            Everything Your Business Needs to{' '}
+            <span className="gradient-text">Grow Online</span>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 16 }}
@@ -102,8 +92,8 @@ export default function Services() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-lg text-gray-500 max-w-xl mx-auto"
           >
-            From design to hosting to growth — Cowebing is your single partner for a complete,
-            professional digital presence.
+            Cowebing delivers five core services that work together to help local businesses
+            get found, build trust, and win more customers.
           </motion.p>
         </div>
 
@@ -114,8 +104,9 @@ export default function Services() {
               initial={{ opacity: 0, y: 28 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.55, delay: index * 0.08 }}
+              className={index === 4 ? 'md:col-span-2 lg:col-span-3 lg:max-w-md lg:mx-auto w-full' : ''}
             >
-              <Link href={service.href} className="block group">
+              <Link href={service.href} className="block group h-full">
                 <div className="card-light h-full cursor-pointer">
                   <div
                     className="w-12 h-12 rounded-xl flex items-center justify-center mb-6 transition-transform duration-300 group-hover:scale-110"
@@ -160,7 +151,7 @@ export default function Services() {
           className="text-center mt-14"
         >
           <Link href="/contact" className="btn-primary text-base px-10 py-4">
-            Start Your Project
+            Book A Free Consultation
             <ArrowRight className="w-5 h-5" />
           </Link>
         </motion.div>

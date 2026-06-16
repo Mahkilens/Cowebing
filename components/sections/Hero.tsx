@@ -2,13 +2,13 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { ArrowRight, Play, Shield, Zap, Globe, Star } from 'lucide-react';
+import { ArrowRight, Play, Globe, Star, TrendingUp, Users } from 'lucide-react';
 
 const trustIndicators = [
-  { icon: Shield, text: '99.9% Uptime Guaranteed' },
-  { icon: Zap, text: '3–7 Day Delivery' },
-  { icon: Globe, text: 'US-Based · Remote Friendly' },
+  { icon: Globe, text: 'Professional Online Presence' },
+  { icon: TrendingUp, text: 'More Leads & Customers' },
   { icon: Star, text: '5-Star Client Experience' },
+  { icon: Users, text: 'Built for Local Business Growth' },
 ];
 
 export default function Hero() {
@@ -43,7 +43,7 @@ export default function Hero() {
           }}
         />
         <div
-          className="absolute inset-0 opacity-[0.025] grid-bg"
+          className="absolute inset-0 opacity-[0.025]"
           style={{
             backgroundImage:
               'linear-gradient(rgba(255,255,255,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.5) 1px, transparent 1px)',
@@ -61,7 +61,7 @@ export default function Hero() {
             className="mb-8"
           >
             <span className="section-label">
-              Custom Websites &middot; Hosting &middot; Digital Growth
+              Get Found Online &middot; Win More Customers
             </span>
           </motion.div>
 
@@ -71,10 +71,10 @@ export default function Hero() {
             transition={{ duration: 0.85, delay: 0.15 }}
             className="text-5xl md:text-6xl lg:text-7xl xl:text-[80px] font-black leading-[1.03] mb-7 tracking-tight text-balance"
           >
-            Professional Websites
+            Get Found Online.
             <br />
-            That Help{' '}
-            <span className="gradient-text">Businesses Grow</span>
+            Win{' '}
+            <span className="gradient-text">More Customers.</span>
           </motion.h1>
 
           <motion.p
@@ -83,8 +83,8 @@ export default function Hero() {
             transition={{ duration: 0.85, delay: 0.3 }}
             className="text-lg md:text-xl text-white/55 max-w-2xl mx-auto mb-12 leading-relaxed"
           >
-            Custom websites, hosting, maintenance, and digital solutions designed to help
-            businesses attract customers and establish a strong online presence.
+            We help local businesses establish a professional online presence, generate
+            leads, build trust, and turn visitors into customers.
           </motion.p>
 
           <motion.div
@@ -95,9 +95,9 @@ export default function Hero() {
           >
             <Link
               href="/contact"
-              className="btn-primary text-base px-9 py-4 w-full sm:w-auto text-base font-semibold"
+              className="btn-primary text-base px-9 py-4 w-full sm:w-auto font-semibold"
             >
-              Schedule Free Consultation
+              Book A Free Consultation
               <ArrowRight className="w-5 h-5" />
             </Link>
             <Link
@@ -105,7 +105,7 @@ export default function Hero() {
               className="btn-secondary text-base px-9 py-4 w-full sm:w-auto font-semibold"
             >
               <Play className="w-4 h-4 fill-white/60" />
-              View Portfolio
+              View Our Work
             </Link>
           </motion.div>
 
@@ -113,7 +113,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.85, delay: 0.6 }}
-            className="flex flex-wrap items-center justify-center gap-6 md:gap-10"
+            className="flex flex-wrap items-center justify-center gap-6 md:gap-10 mb-12"
           >
             {trustIndicators.map((indicator, i) => (
               <div key={i} className="flex items-center gap-2 text-sm text-white/45">
@@ -122,8 +122,17 @@ export default function Hero() {
               </div>
             ))}
           </motion.div>
-        </div>
 
+          <motion.p
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.85, delay: 0.75 }}
+            className="text-sm text-white/30 max-w-lg mx-auto leading-relaxed"
+          >
+            Potential customers are searching online every day. Make sure they find your
+            business instead of your competitors.
+          </motion.p>
+        </div>
       </div>
 
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#0A0A0A] to-transparent pointer-events-none" />
